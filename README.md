@@ -87,7 +87,9 @@ For a basic command-line/terminal Hangman game, the core Python language and its
 *   Open the file on your desired IDE.
 *   Please ensure you have Python installed on your personal computer.
 *   Run the following command to run the program.
-     *     python hangman_main.py
+
+          python hangman_main.py
+
 *   Enter *y* to start the program else enter *n*.
 *   Guess the letters of the word in the given nmber of tries.
 *   If you manage to predict the letters of the word before tries end, you win the game else you lose.
@@ -96,7 +98,9 @@ For a basic command-line/terminal Hangman game, the core Python language and its
 ## Instructions for testing
 
 *   Run the following command to run the program.
-     *     python hangman_main.py
+
+          python hangman_main.py
+
 *   Enter *y* to start the program else enter *n*.
 *   Guess the letters of the word in the given nmber of tries.
 *   If you manage to predict the letters of the word before tries end, you win the game else you lose.
