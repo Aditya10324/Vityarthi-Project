@@ -11,8 +11,9 @@ This is the famous Hnagman game where one has to guess the letters of a word. If
 
 ## Table of Contents
 *   [Features](#features)
-*   [Installation](#installation)
-*   [Usage](#usage)
+*   [Technologies/Tools Used](#technologies)
+*   [Steps to install & run the project](#steps)
+*   [Instructions for testing](#instructions)
 *   [License](#license)
 
 ## Features
@@ -36,18 +37,36 @@ This is the famous Hnagman game where one has to guess the letters of a word. If
 *   __Game Loop and Replayability:__
       The features are wrapped in a game loop that continues until the game ends, after which the player is typically given the option to play again or exit. 
 
-## Installation
+## Technologies/Tools Used
+
+**Core Technologies and Tools (Text-Based)**
+
+For a basic command-line/terminal Hangman game, the core Python language and its standard library modules are sufficient. 
+
+*   __Python Programming Language:__ The foundation for the game's logic, control flow (loops, conditional statements), and data manipulation (strings, lists,       sets).
+*   Built-in Functions:
+            *   __input():__ To get the player's letter guesses from the command line.
+            *   __print():__ To display the game's progress, the hangman (using ASCII art), the hidden word (using underscores), and game messages.
+*   Standard Library Modules:
+            *   __random:__ Specifically the random.choice(words) function, is used to select a word randomly from a predefined list of words called _words_.
+            *   __string:__ The string.ascii_lowercase or string.ascii_uppercase objects can be used for input validation to ensure the player enters a valid                    letter.
+*   __Data Structures:__
+            *   String list to store the words.
+            *   List to efficiently track letters that have already been guessed.
+
+## Steps to install & run the project
 
 *   To Install the code on your personal computer please download the files from github.
-*   Run the file on your desired IDE.
-*   Run the following command on the terminal of your IDE to run the program
-*   python hangman_main.py
-
-## Usage
-
-*   Download the hangman_main.py file on your personal computer.
-*   Run the file on your desired IDE.
+*   Open the file on your desired IDE.
 *   Please ensure you have Python installed on your personal computer.
+*   Run the command python *hangman_main.py*.
+*   Enter *y* to start the program else enter *n*.
+*   Guess the letters of the word in the given nmber of tries.
+*   If you manage to predict the letters of the word before tries end, you win the game else you lose.
+*   You may play again by entering *y* else enter *n* to close the program.
+
+## Instructions for testing
+
 *   Run the command python *hangman_main.py*.
 *   Enter *y* to start the program else enter *n*.
 *   Guess the letters of the word in the given nmber of tries.
