@@ -115,7 +115,14 @@ The game automatically detects both victory and defeat conditions, displaying ap
 
 ### Getting Started
 
-Simply run the script and follow the on-screen prompts. Enter letters when requested, and watch the hangman take shape as you make incorrect guesses. Can you solve the word before the hangman is complete?
+*   Run the following command to run the program.
+
+          python hangman_main.py
+
+*   Enter *y* to start the program else enter *n*.
+*   Guess the letters of the word in the given nmber of tries.
+*   If you manage to predict the letters of the word before tries end, you win the game else you lose.
+*   You may play again by entering *y* else enter *n* to close the program.
 
 ### Future Enhancements
 
