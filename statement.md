@@ -115,6 +115,9 @@ The game automatically detects both victory and defeat conditions, displaying ap
 
 ### Getting Started
 
+*   To Install the code on your personal computer please download the files from github.
+*   Open the file on your desired IDE.
+*   Please ensure you have Python installed on your personal computer.
 *   Run the following command to run the program.
 
           python hangman_main.py
