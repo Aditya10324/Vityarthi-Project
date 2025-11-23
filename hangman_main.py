@@ -11,9 +11,9 @@ def game(word, tries):
     print("Guess the word before the hangman is complete!")
     guessed_letters = []
     word_completion = " _ " * len(word)
+    print(display_hangman(tries))
+    print(word_completion)
     while tries > 0 and "_" in word_completion:
-        print(display_hangman(tries))
-        print(word_completion)
         guess = input("Please enter a letter: ").lower()
         if len(guess) != 1 or not guess.isalpha():
             print("Invalid input. Please enter a single letter.")
