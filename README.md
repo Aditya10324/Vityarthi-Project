@@ -51,8 +51,8 @@ For a basic command-line/terminal Hangman game, the core Python language and its
       *   __random:__ Specifically the random.choice(words) function, is used to select a word randomly from a predefined list of words called _words_.
       *   __string:__ The string.ascii_lowercase or string.ascii_uppercase objects can be used for input validation to ensure the player enters a valid                    letter.
 *   __Data Structures:__
-            *   String list to store the words.
-            *   List to efficiently track letters that have already been guessed.
+      *   String list to store the words.
+      *   List to efficiently track letters that have already been guessed.
 
 ## Steps to install & run the project
 
