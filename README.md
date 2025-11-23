@@ -44,13 +44,19 @@ This is the famous Hnagman game where one has to guess the letters of a word. If
 For a basic command-line/terminal Hangman game, the core Python language and its standard library modules are sufficient. 
 
 *   __Python Programming Language:__ The foundation for the game's logic, control flow (loops, conditional statements), and data manipulation (strings, lists,       sets).
-*   Built-in Functions:
+
+*   __Built-in Functions:__
+
       *   __input():__ To get the player's letter guesses from the command line.
       *   __print():__ To display the game's progress, the hangman (using ASCII art), the hidden word (using underscores), and game messages.
-*   Standard Library Modules:
+
+*   __Standard Library Modules:__
+
       *   __random:__ Specifically the random.choice(words) function, is used to select a word randomly from a predefined list of words called _words_.
       *   __string:__ The string.ascii_lowercase or string.ascii_uppercase objects can be used for input validation to ensure the player enters a valid                    letter.
+
 *   __Data Structures:__
+
       *   String list to store the words.
       *   List to efficiently track letters that have already been guessed.
 
