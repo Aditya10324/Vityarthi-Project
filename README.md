@@ -10,10 +10,9 @@ A brief, one-to-two sentence description of your project and what it does.
 *   I encountered a problem while trying to put the correctly guessed alphabets in their right places because a correctly guesserd letter can occur more than        once in a word and therefore identifying them and putting '_' on the rest of the missing letters was a problem that I encountered and overcame.
 
 ## Table of Contents
-*   [Installation]
-*   [Usage]
-*   [Contributing]
-*   [License]
+*   [Installation](#installation)
+*   [Usage](#usage)
+*   [License](#license)
 
 ## Installation
 
