@@ -17,16 +17,24 @@ This is the famous Hnagman game where one has to guess the letters of a word. If
 
 ## Features
 
-*   __Random Word Selection:__The game program randomly chooses a secret word from a predefined list or text file of words. The random module in Python is commonly used for this function.
-*   __Limited Guesses (Lives):__ The player is given a fixed, limited number of incorrect guesses before losing the game. Each wrong guess results in the loss of a life/attempt.
-*   __Progressive Visual Feedback:__ A visual representation (often ASCII art in a console-based game, or a simple graphic in a GUI version) of the "hangman" is progressively displayed as the player makes incorrect guesses.
-*   __Word Display with Placeholders:__ The secret word is displayed as a series of underscores or blanks, with correct letters filled in as they are guessed. This shows the player the length of the word and their progress.
-*   __User Input and Validation:__ The game prompts the user to input a single letter per turn. The input is validated to ensure it is a single alphabetical character and has not been guessed previously.
-*   __Tracking Guessed Letters:__ The game keeps track of all letters that have been guessed, both correct and incorrect, and often displays them to the player to prevent repetition.
-*   __Win/Loss Conditions:__ The game loop ends when one of two conditions is met:
+*   __Random Word Selection:__
+      The game program randomly chooses a secret word from a predefined list or text file of words. The random module in Python is commonly used for this function.
+*   __Limited Guesses (Lives):__
+      The player is given a fixed, limited number of incorrect guesses before losing the game. Each wrong guess results in the loss of a life/attempt.
+*   __Progressive Visual Feedback:__
+      A visual representation (often ASCII art in a console-based game, or a simple graphic in a GUI version) of the "hangman" is progressively displayed as the player makes incorrect guesses.
+*   __Word Display with Placeholders:__
+      The secret word is displayed as a series of underscores or blanks, with correct letters filled in as they are guessed. This shows the player the length of the word and their progress.
+*   __User Input and Validation:__
+      The game prompts the user to input a single letter per turn. The input is validated to ensure it is a single alphabetical character and has not been guessed previously.
+*   __Tracking Guessed Letters:__
+      The game keeps track of all letters that have been guessed, both correct and incorrect, and often displays them to the player to prevent repetition.
+*   __Win/Loss Conditions:__
+      The game loop ends when one of two conditions is met:
     *   __Win:__ The player correctly guesses all the letters in the word before running out of lives.
     *   __Loss:__ The player runs out of lives before the word is fully guessed, and the full hangman figure is drawn.
-*   __Game Loop and Replayability:__ The features are wrapped in a game loop that continues until the game ends, after which the player is typically given the option to play again or exit. 
+*   __Game Loop and Replayability:__
+      The features are wrapped in a game loop that continues until the game ends, after which the player is typically given the option to play again or exit. 
 
 ## Installation
 
