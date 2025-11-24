@@ -2,7 +2,7 @@
 
 ---
 
-##By: Aditya Negi (25BCE10324)
+## By: Aditya Negi (25BCE10324)
 
 ## 1. COVER PAGE
 
