@@ -330,16 +330,16 @@ Congratulate   Continue Game
     ┌────┴─────────────┐
     │                  │
     ▼(Correct)         ▼(Incorrect)
-┌─────────────┐    ┌──────────────┐
-│ WORD UPDATE │    │ TRIES DECREMENT
-│             │    │
-└─────┬───────┘    └──────┬───────┘
+┌─────────────┐    ┌─────────────────┐
+│ WORD UPDATE │    │ TRIES DECREMENT │
+│             │    │                 │
+└─────┬───────┘    └──────┬──────────┘
       │                   │
       └─────────┬─────────┘
                 │
         ┌───────┴──────────┐
         │                  │
-        ▼(Word Complete)   ▼(Tries = 0)
+        ▼ (Word Complete)  ▼ (Tries = 0)
      ┌─────────┐        ┌──────────┐
      │   WIN   │        │   LOSS   │
      └────┬────┘        └────┬─────┘
@@ -350,7 +350,7 @@ Congratulate   Continue Game
             ┌────────────────┐
             │  PLAY_AGAIN?   │
             └────┬───────┬───┘
-              Yes│       │No
+             Yes │       │ No
                  ▼       ▼
              ┌──────┐ ┌─────┐
              │ LOOP │ │ END │
