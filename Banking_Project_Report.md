@@ -4,27 +4,27 @@
 
 ## 1. COVER PAGE
 
-\begin{center}
+
 
 **BANKING SYSTEM PROJECT**
 
 A Comprehensive Python Application for Financial Management
 
-\bigskip
+
 
 **Project Report**
 
-\bigskip
+
 
 **Institution:** VIT University
 
 **Date:** November 2025
 
-\bigskip
+
 
 *This report documents the design, implementation, and testing of a Banking System application developed as a college project.*
 
-\end{center}
+
 
 ---
 
@@ -137,24 +137,24 @@ The Banking System follows a procedural programming architecture with the follow
 
 ```
 ┌─────────────────────────────────────┐
-│     User Interface (Console)         │
-│  - Input prompts                     │
-│  - Output display                    │
+│     User Interface (Console)        │
+│  - Input prompts                    │
+│  - Output display                   │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
-│     Business Logic Layer             │
-│  - Account Management                │
-│  - Transaction Processing            │
-│  - Interest Calculation              │
-│  - Validation Functions              │
+│     Business Logic Layer            │
+│  - Account Management               │
+│  - Transaction Processing           │
+│  - Interest Calculation             │
+│  - Validation Functions             │
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
-│     Data Storage (In-Memory)         │
-│  - Variables for account details     │
-│  - Transaction records               │
-│  - Calculation results               │
+│     Data Storage (In-Memory)        │
+│  - Variables for account details    │
+│  - Transaction records              │
+│  - Calculation results              │
 └─────────────────────────────────────┘
 ```
 
@@ -180,8 +180,8 @@ The Banking System follows a procedural programming architecture with the follow
                   │              │              │
                   ▼              ▼              ▼
           ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-          │  Enter User  │ │ Select Account│ │ View Account │
-          │   Details    │ │     Type      │ │   Details    │
+          │  Enter User  │ │Select Account│ │ View Account │
+          │   Details    │ │    Type      │ │   Details    │
           └──────────────┘ └──────┬───────┘ └──────────────┘
                                    │
                     ┌──────────────┼──────────────┐
@@ -211,73 +211,50 @@ The Banking System follows a procedural programming architecture with the follow
   │           │
   └─────┬─────┘
         │
-  ┌─────┴──────────┬──────────────┬──────────────┐
-  │                │              │              │
-  ▼                ▼              ▼              ▼
-Savings          RD            FD            Loan
-Account          Process      Process        Process
-Process          │            │              │
-  │              ▼            ▼              ▼
-  │         Calculate      Calculate     Calculate
-  │         Maturity       Maturity      EMI & Total
-  │              │            │              │
-  └──────────────┴────────────┴──────────────┘
+  ┌─────┴─────────┬──────────────┬──────────────┐
+  │               │              │              │
+  ▼               ▼              ▼              ▼
+Savings          RD            FD              Loan
+Account          Process      Process         Process
+Process          │             │                  │
+  │              ▼             ▼                  ▼
+  │         Calculate      Calculate         Calculate
+  │         Maturity       Maturity         EMI & Total
+  │              │            │                  │
+  └──────────────┴────────────┴──────────────────┘
                  │
                  ▼
           Display Results
                  │
                  ▼
                End
-```
 
-### 7.3 Sequence Diagram
-
-```
-User    │    System    │    Calculation    │    Display
-  │         │              │                   │
-  ├─Enter Details─→         │                   │
-  │         │              │                   │
-  │         ├─Validate─────→                   │
-  │         │              │                   │
-  │         │←─Result───────                   │
-  │         │              │                   │
-  ├─Select Account─→        │                   │
-  │         │              │                   │
-  │         ├─Calculate───→│                   │
-  │         │              │                   │
-  │         │←─Result──────                   │
-  │         │              │                   │
-  │         ├──────────────────→ Output       │
-  │         │                   Result       │
-  │         │←──────────────────────────────│
-  │         │                               │
-  │←─ Display Results─────────────────────│
 ```
 
 ### 7.4 Class/Component Diagram
 
 ```
 ┌─────────────────────────────────────────┐
-│         BankingSystem                    │
+│         BankingSystem                   │
 ├─────────────────────────────────────────┤
-│ Properties:                              │
-│ - user_name: String                      │
-│ - user_age: Integer                      │
-│ - user_mobile: Integer                   │
-│ - account_type: Integer                  │
-│ - principal: Float                       │
-│ - time_period: Float                     │
+│ Properties:                             │
+│ - user_name: String                     │
+│ - user_age: Integer                     │
+│ - user_mobile: Integer                  │
+│ - account_type: Integer                 │
+│ - principal: Float                      │
+│ - time_period: Float                    │
 ├─────────────────────────────────────────┤
-│ Methods:                                 │
-│ - get_user_info()                        │
-│ - validate_mobile()                      │
-│ - process_savings_account()              │
-│ - process_rd_account()                   │
-│ - process_fd_account()                   │
-│ - process_loan()                         │
-│ - calculate_interest()                   │
-│ - calculate_emi()                        │
-│ - display_results()                      │
+│ Methods:                                │
+│ - get_user_info()                       │
+│ - validate_mobile()                     │
+│ - process_savings_account()             │
+│ - process_rd_account()                  │
+│ - process_fd_account()                  │
+│ - process_loan()                        │
+│ - calculate_interest()                  │
+│ - calculate_emi()                       │
+│ - display_results()                     │
 └─────────────────────────────────────────┘
 ```
 
