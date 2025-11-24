@@ -1,6 +1,6 @@
 # Project Title: HANGMAN
 
-This is the famous Hnagman game where one has to guess the letters of a word. If a player guesses an incorrect letter a small section of the Hangman appears, else nothing happens. If a player is able to guess the word before the completion of the Hangman, he/she wins else the player loses the game on completion of the Hangman.
+This is the famous Hangman game where one has to guess the letters of a word. If a player guesses an incorrect letter a small section of the Hangman appears, else nothing happens. If a player is able to guess the word before the completion of the Hangman, he/she wins else the player loses the game on completion of the Hangman.
 
 
 ## Overview of the project
