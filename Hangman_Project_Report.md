@@ -1,8 +1,8 @@
 # HANGMAN WORD-GUESSING GAME PROJECT REPORT
 
----
-
 ## By: Aditya Negi (25BCE10324)
+
+---
 
 ## 1. COVER PAGE
 
