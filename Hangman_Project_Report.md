@@ -4,27 +4,27 @@
 
 ## 1. COVER PAGE
 
-\begin{center}
+
 
 **HANGMAN WORD-GUESSING GAME PROJECT**
 
 An Interactive Python Console Application for Word Puzzle Entertainment
 
-\bigskip
+
 
 **Project Report**
 
-\bigskip
+
 
 **Institution:** VIT University
 
 **Date:** November 2025
 
-\bigskip
+
 
 *This report documents the design, implementation, testing, and deployment of an interactive Hangman word-guessing game developed as a college project.*
 
-\end{center}
+
 
 ---
 
@@ -166,7 +166,7 @@ The Hangman game follows a modular procedural architecture with the following co
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
-│   Data Management Layer              │
+│   Data Management Layer             │
 │  - Word bank storage                │
 │  - Game variables (tries, guesses)  │
 │  - Word completion state            │
@@ -189,23 +189,23 @@ The Hangman game follows a modular procedural architecture with the following co
 ### 7.1 Use Case Diagram
 
 ```
-                          ┌─────────────┐
-                          │   Player    │
-                          └──────┬──────┘
-                                 │
-                    ┌────────────┼────────────┐
-                    │            │            │
-                    ▼            ▼            ▼
+                             ┌─────────────┐
+                             │   Player    │
+                             └──────┬──────┘
+                                    │
+                    ┌───────────────┼────────────────┐
+                    │               │                │
+                    ▼               ▼                ▼
             ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
             │  Play Game   │ │ Guess Letter │ │ View Hangman │
             │              │ │              │ │     Art      │
-            └──────────────┘ └──────┬───────┘ └──────────────┘
-                                    │
-                        ┌───────────┼───────────┐
-                        │           │           │
-                        ▼           ▼           ▼
+            └──────────────┘ └──────────┬───┘ └──────────────┘
+                                        │
+                        ┌───────────────┼────────────────┐
+                        │               │                │
+                        ▼               ▼                ▼
                 ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-                │ Win Game     │ │ Lose Game    │ │ Play Again   │
+                │   Win Game   │ │  Lose Game   │ │  Play Again  │
                 │              │ │              │ │              │
                 └──────────────┘ └──────────────┘ └──────────────┘
 ```
@@ -235,21 +235,21 @@ The Hangman game follows a modular procedural architecture with the following co
         │
         ├─→ Get Player Input
         │
-  ┌─────┴─────────────┐
-  │                   │
-  ▼(Valid)            ▼(Invalid)
-Check New        Show Error
-  │               │
-  └─────┬─────────┘
+  ┌─────┴──────────────┐
+  │                    │
+  ▼  (Valid)           ▼  (Invalid)
+Check New            Show Error
+  │                    │
+  └─────┬──────────────┘
         │
-  ┌─────┴──────────┐
-  │                │
-  ▼(Duplicate)     ▼(New)
+  ┌─────┴───────────┐
+  │                 │
+  ▼ (Duplicate)     ▼ (New)
  Warn        Check in Word
   │           │
   │    ┌──────┴──────┐
   │    │             │
-  │    ▼(Yes)        ▼(No)
+  │    ▼ (Yes)       ▼ (No)
   │  Show Success  Decrease Tries
   │    │             │
   │    │        Show Failure
@@ -260,7 +260,7 @@ Check New        Show Error
         │
   ┌─────┴──────────┐
   │                │
-  ▼(Win)           ▼(Loss/Continue)
+  ▼ (Win)          ▼ (Loss/Continue)
 Congratulate   Continue Game
   │                │
   └────┬───────────┘
@@ -269,69 +269,36 @@ Congratulate   Continue Game
        │
   ┌────┴────┐
   │         │
-  ▼(Yes)    ▼(No)
- Loop     Exit
-  │       │
-  └───────┴─→ End
-```
-
-### 7.3 Sequence Diagram
-
-```
-Player  │  System  │  Game Logic  │  Display
-   │        │           │            │
-   ├─Play?─→           │            │
-   │        ├─Select Word           │
-   │        │           │            │
-   │        ├─Initialize Game       │
-   │        │           │            │
-   │        ├──────────────→ Show Hangman
-   │        │           │            │
-   │        │           │       Display Art
-   │        │           │            │
-   ├─Guess Letter──→    │            │
-   │        │           │            │
-   │        ├─Validate Input         │
-   │        │           │            │
-   │        │    ├─Check in Word     │
-   │        │    │       │            │
-   │        │    ├─Update State      │
-   │        │    │       │            │
-   │        ├─────────────→ Display Progress
-   │        │           │            │
-   │        │    ├─Check Win/Loss    │
-   │        │    │       │            │
-   │        │    └─→ Result         │
-   │        │           │            │
-   ├─Continue?───→      │            │
-   │        │           │            │
-   └────────┴───────────┴────────────┘
+  ▼ (Yes)   ▼ (No)
+ Loop      Exit
+  │         │
+  └─────────┴─→ End
 ```
 
 ### 7.4 Class/Component Diagram
 
 ```
 ┌─────────────────────────────────────────┐
-│         HangmanGame                      │
+│         HangmanGame                     │
 ├─────────────────────────────────────────┤
-│ Attributes:                              │
-│ - word_list: List[str]                   │
-│ - selected_word: str                     │
-│ - tries: int                             │
-│ - guessed_letters: List[str]             │
-│ - word_completion: str                   │
-│ - hangman_stages: List[str]              │
+│ Attributes:                             │
+│ - word_list: List[str]                  │
+│ - selected_word: str                    │
+│ - tries: int                            │
+│ - guessed_letters: List[str]            │
+│ - word_completion: str                  │
+│ - hangman_stages: List[str]             │
 ├─────────────────────────────────────────┤
-│ Methods:                                 │
-│ - main()                                 │
-│ - game(word: str, tries: int)            │
-│ - display_hangman(tries: int): str       │
-│ - validate_input(guess: str): bool       │
-│ - process_guess(word: str, guess: str)   │
-│ - check_win_condition(): bool            │
-│ - check_loss_condition(): bool           │
-│ - update_word_completion(): str          │
-│ - play_again(): bool                     │
+│ Methods:                                │
+│ - main()                                │
+│ - game(word: str, tries: int)           │
+│ - display_hangman(tries: int): str      │
+│ - validate_input(guess: str): bool      │
+│ - process_guess(word: str, guess: str)  │
+│ - check_win_condition(): bool           │
+│ - check_loss_condition(): bool          │
+│ - update_word_completion(): str         │
+│ - play_again(): bool                    │
 └─────────────────────────────────────────┘
 ```
 
@@ -383,11 +350,11 @@ Player  │  System  │  Game Logic  │  Display
             ┌────────────────┐
             │  PLAY_AGAIN?   │
             └────┬───────┬───┘
-           Yes│   │No
-              ▼   ▼
-        ┌──────┐ ┌─────┐
-        │ LOOP │ │ END │
-        └──────┘ └─────┘
+              Yes│       │No
+                 ▼       ▼
+             ┌──────┐ ┌─────┐
+             │ LOOP │ │ END │
+             └──────┘ └─────┘
 ```
 
 ---
@@ -595,10 +562,10 @@ Welcome to Hangman!
 Guess the word before the hangman is complete!
 
 --------
-| |
-| O
-
-| |
+|      |
+|      
+|
+| 
 
 apple:  _  _  _  _  _
 Please enter a letter: a
@@ -608,10 +575,22 @@ a  _  _  _  _
 
 **Sample Output 2: Correct Guess Sequence**
 ```
- _  _  _  _  _
+--------
+|      |
+|      
+|
+| 
+
+_  _  _  _  _
 Please enter a letter: e
 Good job! 'e' is in the word.
 a  _  _  _  e
+
+--------
+|      |
+|      
+|
+|
 
 Please enter a letter: p
 Good job! 'p' is in the word.
@@ -620,13 +599,19 @@ a  p  p  _  e
 
 **Sample Output 3: Incorrect Guess**
 ```
+--------
+|      |
+|      
+|
+| 
+
 a  p  p  _  e
 Please enter a letter: z
 Sorry, 'z' is not in the word. You have 5 tries left.
 
 --------
-| |
-| O
+|      |
+|      O
 |
 |
 
@@ -635,6 +620,12 @@ a  p  p  _  e
 
 **Sample Output 4: Win Condition**
 ```
+--------
+|      |
+|      
+|
+| 
+
 a  p  p  l  e
 Congratulations! You've guessed the word!
 ```
@@ -642,11 +633,11 @@ Congratulations! You've guessed the word!
 **Sample Output 5: Loss Condition**
 ```
 --------
-| |
-| O
-| \|/
-| |
-| / \
+|      |
+|      O
+|     \|/
+|      |
+|     / \
 
 
 Game over! The word was 'banana'.
