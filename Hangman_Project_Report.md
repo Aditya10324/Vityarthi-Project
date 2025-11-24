@@ -16,9 +16,9 @@ An Interactive Python Console Application for Word Puzzle Entertainment
 
 
 
-**Institution:** VIT University
+**Institution:** VIT Bhopal University
 
-**Date:** November 2025
+**Date:** 18th November 2025
 
 
 
